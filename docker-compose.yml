@@ -7,7 +7,7 @@ services:
       context: ./Web-App
       dockerfile: dockerfile
     ports:
-      - "80:80"
+      - "8082:80"
 
   neuronal-network:
     build:
