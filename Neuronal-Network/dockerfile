@@ -4,12 +4,12 @@ WORKDIR /Neuronal-Network
 
 COPY . .
 
-RUN python -m venv venv && \
-    . venv/bin/activate && \
-    pip install --no-cache-dir --upgrade pip && \
+RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 
+EXPOSE 5000
 # Define the command to start the application
 CMD ["python", "prueba/a.py"]
