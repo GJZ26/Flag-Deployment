@@ -1,0 +1,18 @@
+version: "3"
+
+name: "flag-detector"
+services:
+
+  web-app:
+    build:
+      context: ./Web-App
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+  neuronal-network:
+    build:
+      context: ./Neuronal-Network
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
