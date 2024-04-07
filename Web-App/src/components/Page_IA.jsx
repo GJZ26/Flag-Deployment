@@ -29,7 +29,7 @@ const Page_IA = () => {
     formData.append('image', blob, 'image.jpg');
 
     try {
-      const response = await fetch('http://host.docker.internal:5000/predict', {
+      const response = await fetch('http://34.203.133.100:5000/predict', {
         method: 'POST',
         body: formData
       });
