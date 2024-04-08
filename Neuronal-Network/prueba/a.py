@@ -23,6 +23,10 @@ history_texts = {
     'Eslovaquia': 'La bandera de Eslovaquia consta de tres franjas horizontales: blanca (arriba), azul (centro) y roja (abajo). El azul representa la libertad, la verdad y la lealtad, el blanco simboliza la unidad y la paz, y el rojo representa el coraje y la valentía.'
 }
 
+@app.get('/', methods=['GET'])
+def hello():
+    return "It Works!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     image_data = request.files['image']

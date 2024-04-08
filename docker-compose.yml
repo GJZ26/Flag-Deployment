@@ -6,4 +6,4 @@ services:
       context: ./Neuronal-Network
       dockerfile: dockerfile
     ports:
-      - "5000:5000"
+      - "5050:5000"
